@@ -1,0 +1,22 @@
+generator client {
+  provider = "prisma-client-js"
+  output   = "../generated/prisma"
+}
+
+datasource db {
+  provider = "postgresql"
+  url      = env("DATABASE_URL")
+}
+
+model Film {
+  id               String   @id @default(uuid())
+  title            String
+  description      String
+  genre            String[]
+  year             Int
+  rating           Float
+  duration_minutes Int
+  poster           String
+  createdAt        DateTime @default(now())
+  updatedAt        DateTime @updatedAt
+}
