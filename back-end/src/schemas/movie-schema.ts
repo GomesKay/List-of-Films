@@ -1,5 +1,6 @@
 import z from "zod"
 
+// Schemas do Zod (Tipagem)
 export const bodyMovieSchema = z.object({
   title: z.string(),
   description: z.string(),

@@ -1,6 +1,7 @@
 import { prisma } from "../lib/prisma"
 import { CreateFilmType, DeleteFilmType, UpdateFilmType } from "../types/movie"
 
+// Services
 export async function getAllMovies() {
   return await prisma.film.findMany()
 }

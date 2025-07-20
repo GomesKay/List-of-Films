@@ -8,6 +8,7 @@ import {
 
 export const movieRoutes = Router()
 
+// Rotas da API
 movieRoutes.route("/movies").get(getMoviesController).post(addMovieController)
 movieRoutes
   .route("/movies/:id")

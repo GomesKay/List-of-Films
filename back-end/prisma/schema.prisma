@@ -8,6 +8,7 @@ datasource db {
   url      = env("DATABASE_URL")
 }
 
+// Modelo da Tabela
 model Film {
   id               String   @id @default(uuid())
   title            String

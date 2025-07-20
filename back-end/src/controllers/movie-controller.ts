@@ -7,6 +7,9 @@ import {
 } from "../services/movie-service"
 import { bodyMovieSchema, paramsMovieSchema } from "../schemas/movie-schema"
 
+// Controllers
+
+// Retorna todos os filmes
 export async function getMoviesController(req: Request, res: Response) {
   try {
     const movies = await getAllMovies()
@@ -17,6 +20,7 @@ export async function getMoviesController(req: Request, res: Response) {
   }
 }
 
+// Cria um novo filme
 export async function addMovieController(req: Request, res: Response) {
   try {
     const {
@@ -44,6 +48,7 @@ export async function addMovieController(req: Request, res: Response) {
   }
 }
 
+// Atualiza um filme
 export async function updateMovieController(req: Request, res: Response) {
   try {
     const { id } = paramsMovieSchema.parse(req.params)
@@ -78,6 +83,7 @@ export async function updateMovieController(req: Request, res: Response) {
   }
 }
 
+// Deleta um filme
 export async function removeMovieController(req: Request, res: Response) {
   try {
     const { id } = paramsMovieSchema.parse(req.params)
