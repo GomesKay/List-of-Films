@@ -35,14 +35,14 @@ export function App() {
   return (
     <div className="flex min-h-screen flex-col items-center gap-30 bg-zinc-950 text-white">
       <header className="flex items-center justify-center pt-32">
-        <h1 className="font-heading text-7xl font-bold">
+        <h1 className="font-heading text-7xl font-bold max-[1000px]:text-5xl max-[425px]:text-3xl">
           <TextAnimate animation="slideLeft" by="character" duration={6}>
             Lista de Filmes & Séries
           </TextAnimate>
         </h1>
       </header>
 
-      <main className="flex w-[1300px] flex-wrap items-center justify-center gap-6">
+      <main className="flex w-[1300px] flex-wrap items-center justify-center gap-6 max-[1300px]:w-[1000px] max-[1000px]:w-[720px] max-[720px]:w-[420px] max-[425px]:w-[360px] max-[360px]:w-[300px]">
         {films.length ? (
           films.map((film) => (
             <div key={film.id} className="h-[510px] w-[300px] bg-zinc-950">
@@ -67,15 +67,15 @@ export function App() {
                   </DrawerTrigger>
                   <DrawerContent className="bg-zinc-950">
                     <DrawerHeader>
-                      <DrawerTitle className="font-heading text-2xl text-white">
+                      <DrawerTitle className="font-heading text-2xl text-white max-[425px]:text-xl">
                         {film.title}
                       </DrawerTitle>
-                      <DrawerDescription className="font-text text-md">
+                      <DrawerDescription className="font-text text-md max-[425px]:text-sm">
                         {film.description}
                       </DrawerDescription>
                     </DrawerHeader>
 
-                    <div className="font-text flex flex-col items-center justify-center text-white">
+                    <div className="font-text flex flex-col items-center justify-center text-white max-[425px]:text-sm">
                       <p>
                         IMDB:{" "}
                         <span className="text-muted-foreground">
