@@ -1,3 +1,4 @@
+// Tipagem dos Dados
 export interface MovieProps {
   id: string
   title: string

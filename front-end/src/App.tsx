@@ -19,6 +19,7 @@ import type { MovieProps } from "./types/movie"
 export function App() {
   const [films, setFilms] = useState<MovieProps[]>([])
 
+  // Conexão com API usando Axios
   async function fetchFilms() {
     try {
       const response = await axios.get("http://localhost:3333/movies")
